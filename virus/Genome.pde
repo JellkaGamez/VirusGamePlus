@@ -110,12 +110,13 @@ class Genome{
     }
   }
   int getWeakestCodon(){
-    double record = 9999;
+    // Renamed from record (now a unusable name idk why) to weakest
+    double weakest = 9999;
     int holder = -1;
     for(int i = 0; i < codons.size(); i++){
       double val = codons.get(i).codonHealth;
-      if(val < record){
-        record = val;
+      if(val < weakest){
+        weakest = val;
         holder = i;
       }
     }
@@ -152,3 +153,4 @@ class Genome{
     }
   }
 }
+
